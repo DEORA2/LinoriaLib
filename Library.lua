@@ -2770,13 +2770,14 @@ function Library:CreateWindow(...)
         Parent = TabArea;
     });
 
-    local TabContainer = Library:Create('Frame', {
+    local TabContainer = Library:Create('ScrollingFrame', {
         BackgroundColor3 = Library.MainColor;
         BorderColor3 = Library.OutlineColor;
         Position = UDim2.new(0, 8, 0, 30);
         Size = UDim2.new(1, -16, 1, -38);
         ZIndex = 2;
         Parent = MainSectionInner;
+        ScrollBarThickness = 0;
     });
 
     Library:AddToRegistry(TabContainer, {
