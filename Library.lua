@@ -1030,9 +1030,9 @@ do
 
                 local Key = KeyPicker.Value;
 
-                if Key == 'MouseButton1' or Key == 'MouseButton2' then
-                    return Key == 'MouseButton1' and InputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1)
-                        or Key == 'MouseButton2' and InputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton2);
+                if Key == 'MB1' or Key == 'MB2' then
+                    return Key == 'MB1' and InputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1)
+                        or Key == 'MB2' and InputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton2);
                 else
                     return InputService:IsKeyDown(Enum.KeyCode[KeyPicker.Value]);
                 end;
@@ -1102,9 +1102,9 @@ do
                     if Input.UserInputType == Enum.UserInputType.Keyboard then
                         Key = Input.KeyCode.Name;
                     elseif Input.UserInputType == Enum.UserInputType.MouseButton1 then
-                        Key = 'MouseButton1';
+                        Key = 'MB1';
                     elseif Input.UserInputType == Enum.UserInputType.MouseButton2 then
-                        Key = 'MouseButton2';
+                        Key = 'MB2';
                     end;
 
                     Break = true;
@@ -1128,9 +1128,9 @@ do
                 if KeyPicker.Mode == 'Toggle' then
                     local Key = KeyPicker.Value;
 
-                    if Key == 'MouseButton1' or Key == 'MouseButton2' then
-                        if Key == 'MouseButton1' and Input.UserInputType == Enum.UserInputType.MouseButton1
-                        or Key == 'MouseButton2' and Input.UserInputType == Enum.UserInputType.MouseButton2 then
+                    if Key == 'MB1' or Key == 'MB2' then
+                        if Key == 'MB1' and Input.UserInputType == Enum.UserInputType.MouseButton1
+                        or Key == 'MB2' and Input.UserInputType == Enum.UserInputType.MouseButton2 then
                             KeyPicker.Toggled = not KeyPicker.Toggled
                             KeyPicker:DoClick()
                         end;
